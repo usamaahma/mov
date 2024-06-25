@@ -14,7 +14,6 @@ searchInput.addEventListener("input", (e) => {
         moviesContainer.innerHTML = "";
     }
 });
-
 function fetchMovies(searchTerm) {
     fetch(`https://api.themoviedb.org/3/search/movie?query=${searchTerm}&api_key=${apikey}`)
         .then(response => response.json())
