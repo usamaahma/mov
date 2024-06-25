@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#backgroundVideo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    background: no-repeat;
+    background-size: cover;
+}
+
+.nav,
+#movies-container,
+.overlay,
+.movie-details {
+    z-index: 2;
+    /* Ensures content is above the video */
+    text-align: center;
+    color: black;
+}
+
+.nav {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.logoimage {
+    width: 5rem;
+    height: 5rem;
+}
+
+#search-bar {
+    margin: 20px 0;
+}
+
+#search-bar input {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    border-radius: 1rem;
+    border: white solid 0.1px;
+    color: white;
+    background-color: transparent;
+    padding: 10px;
+    width: 50rem;
+    font-size: 16px;
+    margin-bottom: 2rem;
+}
+
+#movies-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.h1main {
+    color: white;
+}
+
+.movie-card {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    border: 0.1px solid white;
+    color: white;
+    border-radius: 8px;
+    padding: 15px;
+    width: 300px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.movie-card img {
+    width: 18rem;
+    height: 20rem;
+    border-radius: 8px;
+}
+
+.movie-details {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.movie-details h2 {
+    margin: 0 0 10px 0;
+}
+
+.movie-details img {
+    width: 100%;
+    height: 12rem;
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 500;
+}
+#movies-container h3{
+    color: white;
+}
+
+@media screen and (max-width: 833px) {
+    .nav {
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+    }
+
+    .h1main {
+        font-size: large;
+    }
+
+    #search-bar input {
+        border-radius: 1rem;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+        border: white solid 0.1px;
+        color: white;
+        padding: 10px;
+        width: 18rem;
+        font-size: 16px;
+    }
+}
