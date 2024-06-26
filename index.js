@@ -74,7 +74,7 @@ function closeDetails() {
     movieDetails.style.display = "none";
     overlay.style.display = "none";
 }
-document.addEventListener('click', function (event) {
+document.addEventListener('click', function () {
     if (movieDetails.style.display === "block") {
         closeDetails();
     }
@@ -91,6 +91,4 @@ function loadMoviesFromLocalStorage() {
         displayMovies(movies);
     }
 }
-function hideDetails() {
-    movieDetails.style.display = "none";
-}
+
