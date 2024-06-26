@@ -107,6 +107,7 @@ body {
     width: 100%;
     height: 12rem;
 }
+
 .overlay {
     display: none;
     position: fixed;
@@ -117,11 +118,29 @@ body {
     background: rgba(0, 0, 0, 0.5);
     z-index: 500;
 }
-#movies-container h3{
+
+#movies-container h3 {
     color: white;
 }
 
 @media screen and (max-width: 833px) {
+    .movie-details {
+        font-size: small;
+        background-color: #fff;
+        padding: 20px;
+        width: 18rem;
+        border-radius: 8px;
+    }
+
+    .movie-details img {
+        width: 100%;
+        height: 5rem;
+    }
+
+    .movie-details p {
+        font-size: xx-small;
+    }
+
     .nav {
         display: flex;
         align-items: center;
